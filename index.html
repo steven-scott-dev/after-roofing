@@ -3,9 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Summit Ridge Roofing | After Fixes Conversion Demo</title>
+  <title>Summit Ridge Roofing | After Fixes Mobile-Optimized Demo</title>
   <style>
     * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -13,106 +16,131 @@
       color: #1f2933;
       line-height: 1.5;
     }
-    h1, h2, h3, p { margin-top: 0; }
+
+    h1, h2, h3, p, ul { margin-top: 0; }
     a { text-decoration: none; }
+
     .page-wrap {
-      width: min(1180px, calc(100% - 40px));
+      width: min(1180px, calc(100% - 32px));
       margin: 0 auto;
     }
+
     .comparison-label {
       font-size: 2rem;
-      margin: 38px 0 18px;
+      margin: 28px 0 16px;
       color: #102a43;
     }
+
     .mockup {
       background: #ffffff;
       border: 1px solid #d9e2ec;
       border-radius: 14px;
       overflow: hidden;
-      margin-bottom: 44px;
+      margin-bottom: 90px;
       box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
     }
+
     .section { padding: 28px; }
-    .three-col {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
+
     .btn {
       display: inline-block;
       padding: 13px 18px;
-      border-radius: 8px;
-      font-weight: bold;
+      border-radius: 10px;
+      font-weight: 700;
       border: 1px solid transparent;
+      text-align: center;
     }
+
     .btn-primary {
       background: #b45309;
       color: #fff;
     }
+
     .btn-secondary {
       background: #fff;
       color: #102a43;
       border-color: #bcccdc;
     }
-    .muted { color: #52606d; }
-    .small { font-size: 0.92rem; }
 
+    .small { font-size: 0.92rem; }
+    .muted { color: #52606d; }
+
+    .three-col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    /* Header */
     .after header {
       background: #102a43;
       color: #fff;
-      padding: 0;
-    }
-    .after .top-strip {
-      background: #0b1f33;
-      padding: 10px 28px;
-      font-size: 0.95rem;
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-    .after .main-nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      padding: 18px 28px;
-      flex-wrap: wrap;
-    }
-    .after .brand {
-      font-size: 1.35rem;
-      font-weight: bold;
-    }
-    .after nav a {
-      color: #d9e2ec;
-      margin-left: 18px;
-      font-size: 0.96rem;
-    }
-    .after .phone-link,
-    .after .nav-cta {
-      color: #fff;
-      font-weight: bold;
-    }
-    .after .phone-link {
-      background: #b45309;
-      padding: 8px 12px;
-      border-radius: 999px;
-      display: inline-block;
     }
 
-    .after .hero {
+    .top-strip {
+      background: #0b1f33;
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 0.96rem;
+      font-weight: 600;
+    }
+
+    .main-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 18px 20px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .desktop-nav {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .desktop-nav a {
+      color: #d9e2ec;
+      font-size: 0.96rem;
+    }
+
+    .desktop-phone {
+      background: #b45309;
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    /* Hero */
+    .hero {
       background: linear-gradient(rgba(16, 42, 67, 0.84), rgba(16, 42, 67, 0.84)),
         linear-gradient(135deg, #486581, #243b53);
       color: #fff;
-      padding: 52px 28px 46px;
+      padding: 34px 20px 38px;
     }
-    .after .hero-grid {
+
+    .hero-grid {
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
+      grid-template-columns: 1.08fr 0.92fr;
       gap: 28px;
       align-items: center;
     }
+
     .eyebrow {
       display: inline-block;
       background: rgba(255,255,255,0.12);
@@ -122,73 +150,88 @@
       font-size: 0.9rem;
       margin-bottom: 14px;
     }
-    .after h1 {
-      font-size: 2.8rem;
-      line-height: 1.12;
+
+    h1 {
+      font-size: 3rem;
+      line-height: 1.08;
       margin-bottom: 14px;
-      max-width: 760px;
+      max-width: 700px;
     }
-    .after .hero-copy {
-      font-size: 1.04rem;
-      max-width: 680px;
+
+    .hero-copy {
+      font-size: 1.05rem;
+      max-width: 620px;
       color: #e5eef5;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
-    .after .hero-actions {
+
+    .hero-actions {
       display: flex;
       gap: 12px;
       flex-wrap: wrap;
       margin-bottom: 12px;
     }
-    .after .hero-points {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-      font-size: 0.96rem;
-      color: #d9e2ec;
-      margin-bottom: 16px;
-    }
+
     .urgency-line {
       color: #ffd9b3;
-      font-weight: bold;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .proof-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
       margin-bottom: 18px;
     }
 
+    .proof-pill {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.16);
+      color: #fff;
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
     .hero-visual {
-      margin-top: 18px;
       background: rgba(255,255,255,0.10);
       border: 1px solid rgba(255,255,255,0.18);
       border-radius: 14px;
-      padding: 18px;
+      padding: 16px;
     }
+
     .photo-placeholder {
-      height: 210px;
+      height: 245px;
       border-radius: 12px;
       background: linear-gradient(135deg, #d9e2ec, #bcccdc);
       display: flex;
       align-items: center;
       justify-content: center;
       color: #243b53;
-      font-weight: bold;
       text-align: center;
+      font-weight: 700;
       padding: 20px;
     }
 
-    .after .quote-box {
+    .quote-box {
       background: #fff;
       color: #102a43;
       border-radius: 14px;
       padding: 22px;
       box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
     }
-    .after .quote-box h3 { margin-bottom: 8px; }
-    .after .mini-form {
+
+    .quote-box h3 { margin-bottom: 8px; }
+
+    .mini-form {
       display: grid;
       gap: 10px;
       margin-top: 14px;
     }
-    .after input,
-    .after textarea {
+
+    input, textarea {
       width: 100%;
       padding: 11px 12px;
       border: 1px solid #bcccdc;
@@ -196,87 +239,7 @@
       font: inherit;
     }
 
-    .stars-row {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 14px;
-      margin-bottom: 10px;
-    }
-    .star-pill {
-      background: #fff7ed;
-      color: #9a3412;
-      border: 1px solid #fed7aa;
-      border-radius: 999px;
-      padding: 8px 12px;
-      font-size: 0.92rem;
-      font-weight: bold;
-    }
-
-    .after .trust-row {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-      margin-top: 24px;
-    }
-    .after .trust-pill {
-      background: #f0f4f8;
-      border: 1px solid #d9e2ec;
-      border-radius: 10px;
-      padding: 14px;
-      text-align: center;
-      font-weight: bold;
-      color: #243b53;
-    }
-
-    .after .section-title {
-      font-size: 1.8rem;
-      margin-bottom: 10px;
-      color: #102a43;
-    }
-    .after .section-intro {
-      max-width: 760px;
-      color: #52606d;
-      margin-bottom: 22px;
-    }
-
-    .after .service-card {
-      border: 1px solid #d9e2ec;
-      border-radius: 12px;
-      padding: 20px;
-      background: #fff;
-    }
-    .after .service-card h3 {
-      margin-bottom: 8px;
-      color: #102a43;
-    }
-
-    .after .about-grid,
-    .after .cta-grid,
-    .reviews-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-    }
-
-    .after .soft-panel {
-      background: #f8fafc;
-      border: 1px solid #d9e2ec;
-      border-radius: 14px;
-      padding: 22px;
-    }
-
-    .testimonial {
-      background: #fff;
-      border: 1px solid #d9e2ec;
-      border-radius: 12px;
-      padding: 18px;
-    }
-    .testimonial p {
-      font-style: italic;
-      color: #243b53;
-      margin-bottom: 8px;
-    }
+    textarea { resize: vertical; }
 
     .badge-row {
       display: flex;
@@ -284,46 +247,157 @@
       flex-wrap: wrap;
       margin-top: 14px;
     }
+
     .badge {
-      background: #fff;
+      background: #f8fafc;
       border: 1px solid #d9e2ec;
       border-radius: 999px;
       padding: 8px 12px;
-      font-weight: bold;
+      font-weight: 700;
       font-size: 0.9rem;
       color: #243b53;
     }
 
-    .after .reassurance {
-      background: #fff7ed;
-      border: 1px solid #fed7aa;
+    /* Sections */
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: #102a43;
+    }
+
+    .section-intro {
+      max-width: 760px;
+      color: #52606d;
+      margin-bottom: 22px;
+    }
+
+    .service-card,
+    .soft-panel,
+    .testimonial,
+    .reassurance {
       border-radius: 14px;
       padding: 20px;
     }
 
+    .service-card,
+    .soft-panel,
+    .testimonial {
+      background: #fff;
+      border: 1px solid #d9e2ec;
+    }
+
+    .service-card h3 {
+      margin-bottom: 8px;
+      color: #102a43;
+    }
+
     .callout-list {
       padding-left: 18px;
-      margin: 0;
+      margin-bottom: 0;
       color: #52606d;
     }
 
-    .after footer {
-      background: #102a43;
-      color: #d9e2ec;
-      padding: 24px 28px;
+    .testimonial p {
+      font-style: italic;
+      color: #243b53;
+      margin-bottom: 8px;
     }
 
+    .reassurance {
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+    }
+
+    footer {
+      background: #102a43;
+      color: #d9e2ec;
+      padding: 24px 20px;
+    }
+
+    /* Sticky mobile bar */
+    .mobile-sticky-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 9999;
+      background: #102a43;
+      padding: 10px;
+      gap: 10px;
+      box-shadow: 0 -6px 18px rgba(0,0,0,0.18);
+    }
+
+    .mobile-sticky-bar a {
+      flex: 1;
+      text-align: center;
+      padding: 14px 12px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.98rem;
+    }
+
+    .sticky-call {
+      background: #ffffff;
+      color: #102a43;
+    }
+
+    .sticky-cta {
+      background: #b45309;
+      color: #ffffff;
+    }
+
+    /* Mobile */
     @media (max-width: 920px) {
+      .hero-grid,
       .three-col,
-      .after .hero-grid,
-      .after .trust-row,
-      .after .about-grid,
-      .after .cta-grid,
-      .reviews-grid {
+      .two-col {
         grid-template-columns: 1fr;
       }
-      .after nav a {
-        margin: 0 14px 0 0;
+
+      .desktop-nav {
+        display: none;
+      }
+
+      h1 {
+        font-size: 2.35rem;
+        line-height: 1.08;
+      }
+
+      .hero {
+        padding: 26px 16px 32px;
+      }
+
+      .main-nav {
+        padding: 16px;
+      }
+
+      .top-strip {
+        padding: 10px 16px;
+      }
+
+      .section {
+        padding: 22px 16px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .photo-placeholder {
+        height: 180px;
+      }
+
+      .mobile-sticky-bar {
+        display: flex;
+      }
+
+      .mockup {
+        margin-bottom: 100px;
       }
     }
   </style>
@@ -336,18 +410,18 @@
       <!-- Header -->
       <header>
         <div class="top-strip">
-          <div>Serving homeowners across <strong>Knoxville, TN</strong></div>
-          <div><a class="phone-link" href="tel:18655550184">📞 Call Now: (865) 555-0184</a></div>
+          Serving homeowners across <strong>Knoxville, TN</strong>
         </div>
 
         <div class="main-nav">
           <div class="brand">Summit Ridge Roofing</div>
-          <nav>
-            <a href="#">Services</a>
-            <a href="#">Reviews</a>
-            <a href="#">Why Choose Us</a>
-            <a href="#">Contact</a>
-            <a class="nav-cta" href="#">Free Roof Inspection</a>
+
+          <nav class="desktop-nav">
+            <a href="#services">Services</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#why-us">Why Choose Us</a>
+            <a href="#estimate">Contact</a>
+            <a href="tel:18655550184" class="desktop-phone">📞 Call Now: (865) 555-0184</a>
           </nav>
         </div>
       </header>
@@ -356,44 +430,36 @@
       <section class="hero">
         <div class="hero-grid">
           <div>
-            <div class="eyebrow">Knoxville Roof Repair & Replacement</div>
-            <h1>Stop Roof Problems Before They Cause Costly Interior Damage – Get Your Free Inspection Today</h1>
+            <div class="eyebrow">Knoxville Roof Repair &amp; Replacement</div>
+
+            <h1>Roof Leak or Storm Damage?<br />Get a Free Inspection Today.</h1>
+
             <p class="hero-copy">
               Fast roof inspections, clear recommendations, and straightforward estimates for Knoxville homeowners.
             </p>
 
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#">Schedule My Free Inspection Now</a>
+              <a class="btn btn-primary" href="#estimate">Schedule My Free Inspection Now</a>
               <a class="btn btn-secondary" href="tel:18655550184">📞 Call (865) 555-0184</a>
             </div>
 
-            <div class="urgency-line">Book your free inspection now – limited slots available this week.</div>
+            <p class="urgency-line">Limited inspection spots available this week.</p>
 
-            <div class="hero-points">
-              <span>Free inspections</span>
-              <span>Fast estimate turnaround</span>
-              <span>Local Knoxville service</span>
-            </div>
-
-            <div class="stars-row">
-              <div class="star-pill">★★★★★ Local Homeowners</div>
-              <div class="star-pill">Licensed & Insured</div>
-              <div class="star-pill">Workmanship Warranty</div>
+            <div class="proof-row">
+              <span class="proof-pill">★★★★★ Local Homeowners</span>
+              <span class="proof-pill">Licensed &amp; Insured</span>
+              <span class="proof-pill">Fast Estimates</span>
             </div>
 
             <div class="hero-visual">
-              <div class="photo-placeholder">Team / Truck Photo Area<br />Add crew image, branded truck, or local job photo here</div>
-            </div>
-
-            <div class="trust-row">
-              <div class="trust-pill">Locally Owned</div>
-              <div class="trust-pill">Repair & Replace</div>
-              <div class="trust-pill">Clear Estimates</div>
-              <div class="trust-pill">Responsive Service</div>
+              <div class="photo-placeholder">
+                Team / Truck / Local Roof Photo Area<br />
+                Replace with real company image for trust
+              </div>
             </div>
           </div>
 
-          <aside class="quote-box">
+          <aside class="quote-box" id="estimate">
             <h3>Request Your Free Inspection</h3>
             <p class="small muted">
               Tell us what is happening and we will follow up quickly.
@@ -411,7 +477,7 @@
             </p>
 
             <div class="badge-row">
-              <span class="badge">Licensed & Insured</span>
+              <span class="badge">Licensed &amp; Insured</span>
               <span class="badge">Warranty Backed</span>
               <span class="badge">Knoxville, TN</span>
             </div>
@@ -420,7 +486,7 @@
       </section>
 
       <!-- Services -->
-      <section class="section">
+      <section class="section" id="services">
         <h2 class="section-title">Roofing Services for Knoxville Homeowners</h2>
         <p class="section-intro">
           Whether you have a leak, storm damage, or an aging roof, we help you understand the problem and the next step fast.
@@ -431,10 +497,12 @@
             <h3>Roof Repair</h3>
             <p>Fix leaks, missing shingles, flashing issues, and damage before it spreads.</p>
           </div>
+
           <div class="service-card">
             <h3>Roof Replacement</h3>
             <p>Get a clean replacement plan, clear estimate, and simple timeline.</p>
           </div>
+
           <div class="service-card">
             <h3>Roof Inspections</h3>
             <p>Book a free inspection to find out what needs attention now and what can wait.</p>
@@ -443,74 +511,77 @@
       </section>
 
       <!-- Why Choose Us -->
-      <section class="section">
-        <div class="about-grid">
+      <section class="section" id="why-us">
+        <div class="two-col">
           <div class="soft-panel">
             <h2 class="section-title">Why Homeowners Choose Summit Ridge Roofing</h2>
             <ul class="callout-list">
               <li>Local Knoxville service</li>
               <li>Simple inspection-to-estimate process</li>
-              <li>Visible phone number and fast next step</li>
+              <li>Fast call-back and clear next steps</li>
               <li>Licensed, insured, and warranty-backed</li>
             </ul>
 
             <div class="badge-row">
+              <span class="badge">Locally Owned</span>
               <span class="badge">Licensed</span>
               <span class="badge">Insured</span>
               <span class="badge">Warranty Available</span>
-              <span class="badge">Locally Owned</span>
             </div>
           </div>
 
           <div class="soft-panel">
             <h3>Quick Reassurance</h3>
             <p class="muted">
-              No vague filler. No hidden next step. Just a clear path to an inspection, estimate, and booked job.
+              No vague filler. No confusing next step. Just a clear path to an inspection, estimate, and booked job.
             </p>
             <p class="muted">
-              Phone, form, trust signals, and local relevance are all visible above the fold where they belong.
+              The phone number, CTA, proof, and local relevance all appear early because that is what helps drive action.
             </p>
           </div>
         </div>
       </section>
 
       <!-- Reviews -->
-      <section class="section">
+      <section class="section" id="reviews">
         <h2 class="section-title">What Homeowners Are Saying</h2>
-        <div class="reviews-grid">
+
+        <div class="two-col">
           <div class="testimonial">
             <p>“They explained everything clearly, showed up on time, and made next steps simple. Fast estimate and great service.”</p>
             <strong>— Rachel M., Knoxville</strong>
           </div>
+
           <div class="testimonial">
             <p>“We called about a leak and got quick answers without the runaround. The inspection process was easy.”</p>
             <strong>— David T., Knoxville</strong>
           </div>
         </div>
-        <div class="reviews-grid" style="margin-top: 18px;">
+
+        <div class="two-col" style="margin-top: 18px;">
           <div class="testimonial">
             <p>“Professional, responsive, and easy to work with. We knew exactly what needed to be done and what it would cost.”</p>
             <strong>— Amanda S., Powell</strong>
           </div>
+
           <div class="soft-panel">
-            <h3>Visible Trust Matters</h3>
+            <h3>Trust Elements That Help Conversion</h3>
             <p class="muted">
-              Add real photos, badges, reviews, and warranty language here. That trust stack is what helps turn visits into calls.
+              Add real photos, branded truck shots, review badges, financing badges, or warranty icons here to strengthen trust even more.
             </p>
           </div>
         </div>
       </section>
 
-      <!-- CTA / Contact -->
+      <!-- CTA -->
       <section class="section">
-        <div class="cta-grid">
+        <div class="two-col">
           <div class="reassurance">
             <h2 class="section-title">Small Roof Issues Get Expensive Fast</h2>
             <p>
-              A small leak or damaged shingle can turn into bigger interior damage if ignored.
-              Schedule your free inspection today before the repair gets more expensive.
+              A small leak or damaged shingle can turn into bigger interior damage if ignored. Schedule your free inspection today before the repair gets more expensive.
             </p>
-            <a class="btn btn-primary" href="#">Book My Free Inspection</a>
+            <a class="btn btn-primary" href="#estimate">Book My Free Inspection</a>
           </div>
 
           <div class="soft-panel">
@@ -532,5 +603,11 @@
       </footer>
     </section>
   </div>
+
+  <!-- Sticky mobile CTA bar -->
+  <div class="mobile-sticky-bar">
+    <a href="tel:18655550184" class="sticky-call">📞 Call Now</a>
+    <a href="#estimate" class="sticky-cta">Free Estimate</a>
+  </div>
 </body>
-              </html>
+  </html>
