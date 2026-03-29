@@ -40,7 +40,7 @@
     }
     .btn {
       display: inline-block;
-      padding: 12px 18px;
+      padding: 13px 18px;
       border-radius: 8px;
       font-weight: bold;
       border: 1px solid transparent;
@@ -94,15 +94,22 @@
       color: #fff;
       font-weight: bold;
     }
+    .after .phone-link {
+      background: #b45309;
+      padding: 8px 12px;
+      border-radius: 999px;
+      display: inline-block;
+    }
+
     .after .hero {
-      background: linear-gradient(rgba(16, 42, 67, 0.82), rgba(16, 42, 67, 0.82)),
+      background: linear-gradient(rgba(16, 42, 67, 0.84), rgba(16, 42, 67, 0.84)),
         linear-gradient(135deg, #486581, #243b53);
       color: #fff;
       padding: 52px 28px 46px;
     }
     .after .hero-grid {
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
+      grid-template-columns: 1.15fr 0.85fr;
       gap: 28px;
       align-items: center;
     }
@@ -117,21 +124,21 @@
     }
     .after h1 {
       font-size: 2.8rem;
-      line-height: 1.15;
+      line-height: 1.12;
       margin-bottom: 14px;
-      max-width: 700px;
+      max-width: 760px;
     }
     .after .hero-copy {
-      font-size: 1.08rem;
+      font-size: 1.04rem;
       max-width: 680px;
       color: #e5eef5;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
     .after .hero-actions {
       display: flex;
       gap: 12px;
       flex-wrap: wrap;
-      margin-bottom: 18px;
+      margin-bottom: 12px;
     }
     .after .hero-points {
       display: flex;
@@ -139,7 +146,34 @@
       flex-wrap: wrap;
       font-size: 0.96rem;
       color: #d9e2ec;
+      margin-bottom: 16px;
     }
+    .urgency-line {
+      color: #ffd9b3;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+
+    .hero-visual {
+      margin-top: 18px;
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 14px;
+      padding: 18px;
+    }
+    .photo-placeholder {
+      height: 210px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #d9e2ec, #bcccdc);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #243b53;
+      font-weight: bold;
+      text-align: center;
+      padding: 20px;
+    }
+
     .after .quote-box {
       background: #fff;
       color: #102a43;
@@ -161,6 +195,24 @@
       border-radius: 8px;
       font: inherit;
     }
+
+    .stars-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+      margin-bottom: 10px;
+    }
+    .star-pill {
+      background: #fff7ed;
+      color: #9a3412;
+      border: 1px solid #fed7aa;
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 0.92rem;
+      font-weight: bold;
+    }
+
     .after .trust-row {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -176,6 +228,7 @@
       font-weight: bold;
       color: #243b53;
     }
+
     .after .section-title {
       font-size: 1.8rem;
       margin-bottom: 10px;
@@ -186,6 +239,7 @@
       color: #52606d;
       margin-bottom: 22px;
     }
+
     .after .service-card {
       border: 1px solid #d9e2ec;
       border-radius: 12px;
@@ -196,40 +250,76 @@
       margin-bottom: 8px;
       color: #102a43;
     }
+
     .after .about-grid,
-    .after .cta-grid {
+    .after .cta-grid,
+    .reviews-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 24px;
     }
+
     .after .soft-panel {
       background: #f8fafc;
       border: 1px solid #d9e2ec;
       border-radius: 14px;
       padding: 22px;
     }
-    .after .testimonial {
+
+    .testimonial {
+      background: #fff;
+      border: 1px solid #d9e2ec;
+      border-radius: 12px;
+      padding: 18px;
+    }
+    .testimonial p {
       font-style: italic;
       color: #243b53;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
+
+    .badge-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+    .badge {
+      background: #fff;
+      border: 1px solid #d9e2ec;
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-weight: bold;
+      font-size: 0.9rem;
+      color: #243b53;
+    }
+
     .after .reassurance {
       background: #fff7ed;
       border: 1px solid #fed7aa;
       border-radius: 14px;
       padding: 20px;
     }
+
+    .callout-list {
+      padding-left: 18px;
+      margin: 0;
+      color: #52606d;
+    }
+
     .after footer {
       background: #102a43;
       color: #d9e2ec;
       padding: 24px 28px;
     }
+
     @media (max-width: 920px) {
       .three-col,
       .after .hero-grid,
       .after .trust-row,
       .after .about-grid,
-      .after .cta-grid {
+      .after .cta-grid,
+      .reviews-grid {
         grid-template-columns: 1fr;
       }
       .after nav a {
@@ -247,15 +337,15 @@
       <header>
         <div class="top-strip">
           <div>Serving homeowners across <strong>Knoxville, TN</strong></div>
-          <div><a class="phone-link" href="tel:18655550184">Call Now: (865) 555-0184</a></div>
+          <div><a class="phone-link" href="tel:18655550184">📞 Call Now: (865) 555-0184</a></div>
         </div>
 
         <div class="main-nav">
           <div class="brand">Summit Ridge Roofing</div>
           <nav>
             <a href="#">Services</a>
-            <a href="#">Why Homeowners Choose Us</a>
             <a href="#">Reviews</a>
+            <a href="#">Why Choose Us</a>
             <a href="#">Contact</a>
             <a class="nav-cta" href="#">Free Roof Inspection</a>
           </nav>
@@ -267,21 +357,32 @@
         <div class="hero-grid">
           <div>
             <div class="eyebrow">Knoxville Roof Repair & Replacement</div>
-            <h1>Stop Roof Problems Before They Turn Into Costly Interior Damage</h1>
+            <h1>Stop Roof Problems Before They Cause Costly Interior Damage – Get Your Free Inspection Today</h1>
             <p class="hero-copy">
-              Summit Ridge Roofing helps Knoxville homeowners get a fast roof inspection,
-              a clear recommendation, and a straightforward estimate without the runaround.
+              Fast roof inspections, clear recommendations, and straightforward estimates for Knoxville homeowners.
             </p>
 
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#">Get My Free Roof Inspection</a>
-              <a class="btn btn-secondary" href="tel:18655550184">Call (865) 555-0184</a>
+              <a class="btn btn-primary" href="#">Schedule My Free Inspection Now</a>
+              <a class="btn btn-secondary" href="tel:18655550184">📞 Call (865) 555-0184</a>
             </div>
+
+            <div class="urgency-line">Book your free inspection now – limited slots available this week.</div>
 
             <div class="hero-points">
               <span>Free inspections</span>
               <span>Fast estimate turnaround</span>
               <span>Local Knoxville service</span>
+            </div>
+
+            <div class="stars-row">
+              <div class="star-pill">★★★★★ Local Homeowners</div>
+              <div class="star-pill">Licensed & Insured</div>
+              <div class="star-pill">Workmanship Warranty</div>
+            </div>
+
+            <div class="hero-visual">
+              <div class="photo-placeholder">Team / Truck Photo Area<br />Add crew image, branded truck, or local job photo here</div>
             </div>
 
             <div class="trust-row">
@@ -295,19 +396,25 @@
           <aside class="quote-box">
             <h3>Request Your Free Inspection</h3>
             <p class="small muted">
-              Tell us what is going on and we will follow up quickly to schedule your inspection.
+              Tell us what is happening and we will follow up quickly.
             </p>
 
             <div class="mini-form">
               <input type="text" placeholder="Your name" />
-              <input type="text" placeholder="Best phone number" />
+              <input type="text" placeholder="Phone Number" />
               <textarea rows="4" placeholder="Leak, storm damage, missing shingles, or aging roof?"></textarea>
               <a class="btn btn-primary" href="#">Request My Estimate</a>
             </div>
 
-            <p class="small muted" style="margin-top: 12px; margin-bottom: 0;">
+            <p class="small muted" style="margin-top: 12px; margin-bottom: 10px;">
               Prefer to talk now? Call <strong>(865) 555-0184</strong>
             </p>
+
+            <div class="badge-row">
+              <span class="badge">Licensed & Insured</span>
+              <span class="badge">Warranty Backed</span>
+              <span class="badge">Knoxville, TN</span>
+            </div>
           </aside>
         </div>
       </section>
@@ -316,50 +423,80 @@
       <section class="section">
         <h2 class="section-title">Roofing Services for Knoxville Homeowners</h2>
         <p class="section-intro">
-          Whether you have an active leak, storm damage, or an older roof that is starting to fail,
-          we make it easy to understand the problem and the next step.
+          Whether you have a leak, storm damage, or an aging roof, we help you understand the problem and the next step fast.
         </p>
 
         <div class="three-col">
           <div class="service-card">
             <h3>Roof Repair</h3>
-            <p>Fix leaks, damaged flashing, missing shingles, and problem areas before they spread.</p>
+            <p>Fix leaks, missing shingles, flashing issues, and damage before it spreads.</p>
           </div>
           <div class="service-card">
             <h3>Roof Replacement</h3>
-            <p>Get a clean, professional replacement plan with a clear estimate and timeline.</p>
+            <p>Get a clean replacement plan, clear estimate, and simple timeline.</p>
           </div>
           <div class="service-card">
             <h3>Roof Inspections</h3>
-            <p>Book a free inspection to find out what needs attention and what can wait.</p>
+            <p>Book a free inspection to find out what needs attention now and what can wait.</p>
           </div>
         </div>
       </section>
 
-      <!-- About / Trust -->
+      <!-- Why Choose Us -->
       <section class="section">
         <div class="about-grid">
           <div class="soft-panel">
-            <h2 class="section-title">Why Homeowners Call Summit Ridge Roofing</h2>
-            <p class="muted">
-              This version is stronger because it removes vague filler, adds a clear local offer,
-              puts the phone number in the header, and makes the next step obvious.
-            </p>
-            <ul class="muted">
-              <li>Knoxville, TN service area stated clearly</li>
-              <li>Simple process from inspection to estimate</li>
-              <li>Visible phone number and action buttons</li>
-              <li>Messaging focused on homeowner outcome, not vague claims</li>
+            <h2 class="section-title">Why Homeowners Choose Summit Ridge Roofing</h2>
+            <ul class="callout-list">
+              <li>Local Knoxville service</li>
+              <li>Simple inspection-to-estimate process</li>
+              <li>Visible phone number and fast next step</li>
+              <li>Licensed, insured, and warranty-backed</li>
             </ul>
+
+            <div class="badge-row">
+              <span class="badge">Licensed</span>
+              <span class="badge">Insured</span>
+              <span class="badge">Warranty Available</span>
+              <span class="badge">Locally Owned</span>
+            </div>
           </div>
 
           <div class="soft-panel">
-            <h3>Homeowner Review</h3>
-            <p class="testimonial">
-              “They explained the issue clearly, showed up when they said they would,
-              and made it easy to move forward. I called for an inspection and had my estimate fast.”
+            <h3>Quick Reassurance</h3>
+            <p class="muted">
+              No vague filler. No hidden next step. Just a clear path to an inspection, estimate, and booked job.
             </p>
-            <p class="small muted">— Rachel M., Knoxville homeowner</p>
+            <p class="muted">
+              Phone, form, trust signals, and local relevance are all visible above the fold where they belong.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reviews -->
+      <section class="section">
+        <h2 class="section-title">What Homeowners Are Saying</h2>
+        <div class="reviews-grid">
+          <div class="testimonial">
+            <p>“They explained everything clearly, showed up on time, and made next steps simple. Fast estimate and great service.”</p>
+            <strong>— Rachel M., Knoxville</strong>
+          </div>
+          <div class="testimonial">
+            <p>“We called about a leak and got quick answers without the runaround. The inspection process was easy.”</p>
+            <strong>— David T., Knoxville</strong>
+          </div>
+        </div>
+        <div class="reviews-grid" style="margin-top: 18px;">
+          <div class="testimonial">
+            <p>“Professional, responsive, and easy to work with. We knew exactly what needed to be done and what it would cost.”</p>
+            <strong>— Amanda S., Powell</strong>
+          </div>
+          <div class="soft-panel">
+            <h3>Visible Trust Matters</h3>
+            <p class="muted">
+              Add real photos, badges, reviews, and warranty language here. That trust stack is what helps turn visits into calls.
+            </p>
           </div>
         </div>
       </section>
@@ -370,20 +507,19 @@
           <div class="reassurance">
             <h2 class="section-title">Small Roof Issues Get Expensive Fast</h2>
             <p>
-              If you have signs of a leak, missing shingles, or storm damage, getting it checked now can help
-              you avoid bigger repair bills later.
+              A small leak or damaged shingle can turn into bigger interior damage if ignored.
+              Schedule your free inspection today before the repair gets more expensive.
             </p>
             <a class="btn btn-primary" href="#">Book My Free Inspection</a>
           </div>
 
           <div class="soft-panel">
             <h3>Call or Request an Estimate</h3>
-            <p class="muted">
-              Ready to talk? This version makes the next step painfully obvious.
-            </p>
-            <p><strong>Phone:</strong> <a href="tel:18655550184">(865) 555-0184</a></p>
+            <p class="muted">Make the next step obvious and friction-free.</p>
+            <p><strong>📞 Phone:</strong> <a href="tel:18655550184">(865) 555-0184</a></p>
             <p><strong>Service Area:</strong> Knoxville, TN</p>
             <p><strong>Offer:</strong> Free roof inspection and fast estimate request</p>
+            <p><strong>Trust:</strong> Licensed, insured, and warranty-backed</p>
           </div>
         </div>
       </section>
@@ -397,4 +533,4 @@
     </section>
   </div>
 </body>
-</html>
+              </html>
