@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Summit Ridge Roofing | After Fixes Conversion Demo</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f5f7;
+      color: #1f2933;
+      line-height: 1.5;
+    }
+    h1, h2, h3, p { margin-top: 0; }
+    a { text-decoration: none; }
+    .page-wrap {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+    .comparison-label {
+      font-size: 2rem;
+      margin: 38px 0 18px;
+      color: #102a43;
+    }
+    .mockup {
+      background: #ffffff;
+      border: 1px solid #d9e2ec;
+      border-radius: 14px;
+      overflow: hidden;
+      margin-bottom: 44px;
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+    }
+    .section { padding: 28px; }
+    .three-col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-weight: bold;
+      border: 1px solid transparent;
+    }
+    .btn-primary {
+      background: #b45309;
+      color: #fff;
+    }
+    .btn-secondary {
+      background: #fff;
+      color: #102a43;
+      border-color: #bcccdc;
+    }
+    .muted { color: #52606d; }
+    .small { font-size: 0.92rem; }
+
+    .after header {
+      background: #102a43;
+      color: #fff;
+      padding: 0;
+    }
+    .after .top-strip {
+      background: #0b1f33;
+      padding: 10px 28px;
+      font-size: 0.95rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .after .main-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 18px 28px;
+      flex-wrap: wrap;
+    }
+    .after .brand {
+      font-size: 1.35rem;
+      font-weight: bold;
+    }
+    .after nav a {
+      color: #d9e2ec;
+      margin-left: 18px;
+      font-size: 0.96rem;
+    }
+    .after .phone-link,
+    .after .nav-cta {
+      color: #fff;
+      font-weight: bold;
+    }
+    .after .hero {
+      background: linear-gradient(rgba(16, 42, 67, 0.82), rgba(16, 42, 67, 0.82)),
+        linear-gradient(135deg, #486581, #243b53);
+      color: #fff;
+      padding: 52px 28px 46px;
+    }
+    .after .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 28px;
+      align-items: center;
+    }
+    .eyebrow {
+      display: inline-block;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 0.9rem;
+      margin-bottom: 14px;
+    }
+    .after h1 {
+      font-size: 2.8rem;
+      line-height: 1.15;
+      margin-bottom: 14px;
+      max-width: 700px;
+    }
+    .after .hero-copy {
+      font-size: 1.08rem;
+      max-width: 680px;
+      color: #e5eef5;
+      margin-bottom: 20px;
+    }
+    .after .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+    .after .hero-points {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 0.96rem;
+      color: #d9e2ec;
+    }
+    .after .quote-box {
+      background: #fff;
+      color: #102a43;
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
+    }
+    .after .quote-box h3 { margin-bottom: 8px; }
+    .after .mini-form {
+      display: grid;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .after input,
+    .after textarea {
+      width: 100%;
+      padding: 11px 12px;
+      border: 1px solid #bcccdc;
+      border-radius: 8px;
+      font: inherit;
+    }
+    .after .trust-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 24px;
+    }
+    .after .trust-pill {
+      background: #f0f4f8;
+      border: 1px solid #d9e2ec;
+      border-radius: 10px;
+      padding: 14px;
+      text-align: center;
+      font-weight: bold;
+      color: #243b53;
+    }
+    .after .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: #102a43;
+    }
+    .after .section-intro {
+      max-width: 760px;
+      color: #52606d;
+      margin-bottom: 22px;
+    }
+    .after .service-card {
+      border: 1px solid #d9e2ec;
+      border-radius: 12px;
+      padding: 20px;
+      background: #fff;
+    }
+    .after .service-card h3 {
+      margin-bottom: 8px;
+      color: #102a43;
+    }
+    .after .about-grid,
+    .after .cta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .after .soft-panel {
+      background: #f8fafc;
+      border: 1px solid #d9e2ec;
+      border-radius: 14px;
+      padding: 22px;
+    }
+    .after .testimonial {
+      font-style: italic;
+      color: #243b53;
+      margin-bottom: 10px;
+    }
+    .after .reassurance {
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      border-radius: 14px;
+      padding: 20px;
+    }
+    .after footer {
+      background: #102a43;
+      color: #d9e2ec;
+      padding: 24px 28px;
+    }
+    @media (max-width: 920px) {
+      .three-col,
+      .after .hero-grid,
+      .after .trust-row,
+      .after .about-grid,
+      .after .cta-grid {
+        grid-template-columns: 1fr;
+      }
+      .after nav a {
+        margin: 0 14px 0 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrap">
+    <h2 class="comparison-label">After Fixes</h2>
+
+    <section class="mockup after">
+      <!-- Header -->
+      <header>
+        <div class="top-strip">
+          <div>Serving homeowners across <strong>Knoxville, TN</strong></div>
+          <div><a class="phone-link" href="tel:18655550184">Call Now: (865) 555-0184</a></div>
+        </div>
+
+        <div class="main-nav">
+          <div class="brand">Summit Ridge Roofing</div>
+          <nav>
+            <a href="#">Services</a>
+            <a href="#">Why Homeowners Choose Us</a>
+            <a href="#">Reviews</a>
+            <a href="#">Contact</a>
+            <a class="nav-cta" href="#">Free Roof Inspection</a>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero-grid">
+          <div>
+            <div class="eyebrow">Knoxville Roof Repair & Replacement</div>
+            <h1>Stop Roof Problems Before They Turn Into Costly Interior Damage</h1>
+            <p class="hero-copy">
+              Summit Ridge Roofing helps Knoxville homeowners get a fast roof inspection,
+              a clear recommendation, and a straightforward estimate without the runaround.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#">Get My Free Roof Inspection</a>
+              <a class="btn btn-secondary" href="tel:18655550184">Call (865) 555-0184</a>
+            </div>
+
+            <div class="hero-points">
+              <span>Free inspections</span>
+              <span>Fast estimate turnaround</span>
+              <span>Local Knoxville service</span>
+            </div>
+
+            <div class="trust-row">
+              <div class="trust-pill">Locally Owned</div>
+              <div class="trust-pill">Repair & Replace</div>
+              <div class="trust-pill">Clear Estimates</div>
+              <div class="trust-pill">Responsive Service</div>
+            </div>
+          </div>
+
+          <aside class="quote-box">
+            <h3>Request Your Free Inspection</h3>
+            <p class="small muted">
+              Tell us what is going on and we will follow up quickly to schedule your inspection.
+            </p>
+
+            <div class="mini-form">
+              <input type="text" placeholder="Your name" />
+              <input type="text" placeholder="Best phone number" />
+              <textarea rows="4" placeholder="Leak, storm damage, missing shingles, or aging roof?"></textarea>
+              <a class="btn btn-primary" href="#">Request My Estimate</a>
+            </div>
+
+            <p class="small muted" style="margin-top: 12px; margin-bottom: 0;">
+              Prefer to talk now? Call <strong>(865) 555-0184</strong>
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section class="section">
+        <h2 class="section-title">Roofing Services for Knoxville Homeowners</h2>
+        <p class="section-intro">
+          Whether you have an active leak, storm damage, or an older roof that is starting to fail,
+          we make it easy to understand the problem and the next step.
+        </p>
+
+        <div class="three-col">
+          <div class="service-card">
+            <h3>Roof Repair</h3>
+            <p>Fix leaks, damaged flashing, missing shingles, and problem areas before they spread.</p>
+          </div>
+          <div class="service-card">
+            <h3>Roof Replacement</h3>
+            <p>Get a clean, professional replacement plan with a clear estimate and timeline.</p>
+          </div>
+          <div class="service-card">
+            <h3>Roof Inspections</h3>
+            <p>Book a free inspection to find out what needs attention and what can wait.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- About / Trust -->
+      <section class="section">
+        <div class="about-grid">
+          <div class="soft-panel">
+            <h2 class="section-title">Why Homeowners Call Summit Ridge Roofing</h2>
+            <p class="muted">
+              This version is stronger because it removes vague filler, adds a clear local offer,
+              puts the phone number in the header, and makes the next step obvious.
+            </p>
+            <ul class="muted">
+              <li>Knoxville, TN service area stated clearly</li>
+              <li>Simple process from inspection to estimate</li>
+              <li>Visible phone number and action buttons</li>
+              <li>Messaging focused on homeowner outcome, not vague claims</li>
+            </ul>
+          </div>
+
+          <div class="soft-panel">
+            <h3>Homeowner Review</h3>
+            <p class="testimonial">
+              “They explained the issue clearly, showed up when they said they would,
+              and made it easy to move forward. I called for an inspection and had my estimate fast.”
+            </p>
+            <p class="small muted">— Rachel M., Knoxville homeowner</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA / Contact -->
+      <section class="section">
+        <div class="cta-grid">
+          <div class="reassurance">
+            <h2 class="section-title">Small Roof Issues Get Expensive Fast</h2>
+            <p>
+              If you have signs of a leak, missing shingles, or storm damage, getting it checked now can help
+              you avoid bigger repair bills later.
+            </p>
+            <a class="btn btn-primary" href="#">Book My Free Inspection</a>
+          </div>
+
+          <div class="soft-panel">
+            <h3>Call or Request an Estimate</h3>
+            <p class="muted">
+              Ready to talk? This version makes the next step painfully obvious.
+            </p>
+            <p><strong>Phone:</strong> <a href="tel:18655550184">(865) 555-0184</a></p>
+            <p><strong>Service Area:</strong> Knoxville, TN</p>
+            <p><strong>Offer:</strong> Free roof inspection and fast estimate request</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        <strong>Summit Ridge Roofing</strong><br />
+        Knoxville, TN | Roof Repair, Roof Replacement, Free Inspections<br />
+        Call: (865) 555-0184
+      </footer>
+    </section>
+  </div>
+</body>
+</html>
